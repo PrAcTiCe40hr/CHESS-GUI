@@ -25,8 +25,9 @@ A simple Chess GUI created using Python and PyQt5, featuring a play against the 
 ```bash
 pip install python-chess PyQt5
 ```
+2. Download the Stockfish chess engine and update the path in the ChessGui.__init__ method to point to the Stockfish executable.
 
-2. Run the script:
+3. Run the script:
 
 ```bash
 python main.py
