@@ -9,6 +9,10 @@ from src.stockfish_thread import StockfishThread
 class ChessGui(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+
+        with open("src\\style.qss", "r") as file:
+            self.setStyleSheet(file.read())
+
         self.board = chess.Board()
         self.selected_piece = None
         self.buttons = []
@@ -27,7 +31,7 @@ class ChessGui(QMainWindow):
         self.time_slider.setValue(2)  # Default value
         self.time_slider.valueChanged.connect(self.update_time)
 
-        self.time_label = QLabel('Engine Time: 2.0s', self)
+        self.time_label = QLabel('Engine Time: 2s', self)
         self.time_label.setGeometry(440, 10, 100, 30)
 
         # Create skill slider
@@ -64,7 +68,7 @@ class ChessGui(QMainWindow):
         self.create_board_buttons()
         self.create_move_history()
         self.update_ui()
-
+        
     def update_time(self):
         self.engine_time = self.time_slider.value()
         self.time_label.setText('Engine Time: {}s'.format(self.engine_time))
