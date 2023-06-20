@@ -32,3 +32,10 @@ pip install python-chess PyQt5
 ```bash
 python main.py
 ```
+## Contributing
+
+Please feel free to fork this repository and submit pull requests. You can also open an issue if you find any bugs or have any suggestions for improvements.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
