@@ -10,7 +10,7 @@ class ChessGui(QMainWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        with open("src\\style.qss", "r") as file:
+        with open("style\\style.qss", "r") as file:
             self.setStyleSheet(file.read())
 
         self.board = chess.Board()
